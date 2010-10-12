@@ -1,10 +1,29 @@
-<!DOCTYPE html>
 <html>
-<head></head>
+<head>
+<title>Mobile Console Test</title>
+</head>
 <body>
-<h1>Test</h1>
+<h1>Mobile Console Test</h1>
+<p>Make sure you have the other console window open...</p>
+<script type="text/javascript">
 
-<script type="application/x-javascript" src="http://localhost:3000/public/js/debug.js"></script>
+var s = document.getElementsByTagName('script')[0],
+	debug = document.createElement('script');
 
+debug.src = '/../debug/' + window.location.pathname.split('/').pop().split('.').shift() + '.js';
+debug.onload = function () {
+	setTimeout(function() {
+	
+		var test = {a: [1,2,3], b: 'c'}
+
+		console.log(test);	
+		console.log('Hey, this is the other window talking to you using console.log');
+
+	
+	}, 1000);
+}
+s.parentNode.insertBefore(debug, s);
+
+</script>
 </body>
 </html>

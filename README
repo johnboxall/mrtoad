@@ -1,0 +1,10 @@
+Mr.Toad is a remote console for webpages.
+
+Open the console and then paste the debug script into the page you'd like to test.
+Navigate to your testing page with your phone and shabang, instant remote debugging.
+
+A hosted version is available:
+
+http://mrtoad.mobify.me/
+
+Things are still pretty raw. Thanks nodejs / socketio / jsconsole for all the pieces!
